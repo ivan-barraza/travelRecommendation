@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+nav {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: #172525; 
+  padding: 10px 20px; 
+  color: white; 
+}
+
+nav ul {
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  display: flex; 
+}
+
+nav ul li {
+  margin-right: 20px; 
+}
+
+nav ul li a {
+  text-decoration: none; 
+  color: white; 
+  font-weight: bold; 
+  padding: 5px 0; 
+  transition: color 0.3s ease; 
+}
+
+nav ul li a:hover {
+  color: #f0f0f0; 
+}
+
+nav div {
+  display: flex; 
+  align-items: center; 
+}
+
+#txtBusqueda {
+  padding: 8px;
+  border: none;
+  border-radius: 4px; 
+  margin-right: 10px; 
+  width: 200px; 
+}
+
+#cmdBusqueda,
+#cmdReset {
+  padding: 8px 15px;
+  background-color: #077a7d; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; 
+  margin-left: 5px; 
+  transition: background-color 0.3s ease; 
+}
+
+#cmdReset {
+  background-color: #dc3545; 
+}
+
+#cmdBusqueda:hover {
+  background-color: #096a6d; 
+}
+
+#cmdReset:hover {
+  background-color: #c82333; 
+}
+
+.parent {
+    height: 100dvh;
+    display: grid;
+    grid-template: auto 1fr / 1fr;
+  }
+  
+header {
+    grid-column: 1;
+}
+main {
+    height: 100%;
+    grid-column: 1;
+    background-image: url("https://jetnews.com.mx/wp-content/uploads/2017/11/10-Common-Travel-Mistakes-You-Can-Avoid.jpg");
+}
+
+.split-main{
+    display: flex;
+    justify-content: space-between;
+}
+.pane{
+    height: 100%;
+    width: 50%;
+}

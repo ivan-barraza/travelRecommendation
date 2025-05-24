@@ -1,8 +1,9 @@
 const txtBusqueda = document.querySelector("#txtBusqueda");
 const botonBusqueda = document.querySelector("#cmdBusqueda");
 const botonReset = document.querySelector("#cmdReset");
+const divResultados = document.querySelector("#resultados")
 
-botonReset.addEventListener("click",()=>{txtBusqueda.value=""});
+botonReset.addEventListener("click",()=>{txtBusqueda.value=""; divResultados.innerHTML=""});
 botonBusqueda.addEventListener("click",()=>{buscarRecomendaciones()});
 
 function buscarRecomendaciones(){
@@ -14,6 +15,7 @@ function buscarRecomendaciones(){
 function mostrarRecomendaciones(datos){
     let strBusqueda = txtBusqueda.value.toLowerCase();
     let resultados = [];
+    divResultados.innerHTML="";    
 
     datos.countries.forEach((pais)=>{
         pais.cities.forEach((ciudad)=>{
@@ -34,5 +36,20 @@ function mostrarRecomendaciones(datos){
             resultados.push(playa)
         }
     })
-    console.log(resultados);
+
+    resultados.forEach((resultado)=>{
+        let tarjeta = document.createElement("div");
+        let titulo = document.createElement("h2");
+        let imagen = document.createElement("img");
+        let descripcion = document.createElement("p")
+        tarjeta.classList.add("tarjeta");
+        titulo.textContent = resultado.name;
+        imagen.src = resultado.imageUrl;
+        descripcion.textContent = resultado.description;
+        tarjeta.appendChild(imagen);
+        tarjeta.appendChild(titulo);
+        tarjeta.appendChild(descripcion);
+        divResultados.appendChild(tarjeta);
+    })
+
 }

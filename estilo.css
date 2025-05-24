@@ -94,3 +94,56 @@ main {
     height: 100%;
     width: 50%;
 }
+.tarjeta{
+    width: 80%;
+    height: auto;
+    background-color: #f0f0f0;
+    margin-top: 10px;
+}
+.tarjeta img{
+    width: 100%;
+}
+
+.main-titulo{
+    font-size: 5rem;
+    font-weight: bolder;
+    font-style: normal;
+    color: #fff;
+    line-height: 5rem;
+}
+.main-contenido{
+    text-align: center;
+    height: auto;
+    margin: auto;
+    margin-top: 2rem;
+    color: #6e6e6e;
+    font-size: 1.2rem;
+}
+.acerca h1{
+    text-align: center;
+    font-size: 6rem;
+    font-weight: bolder;
+    font-style: normal;
+    color: #fff;
+    line-height: 6rem;
+}
+
+.acerca p{
+    text-align: center;
+    width: 40rem;
+    height: auto;
+    margin: auto;
+    margin-top: 2rem;
+    color: #6e6e6e;
+    font-size: 1.2rem;
+}
+
+.acerca div{
+    text-align: center;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    margin-top: 2rem;
+    color: #6e6e6e;
+    font-size: 1.2rem;
+}
